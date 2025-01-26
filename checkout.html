@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Dawood Khan Ladies Clothing Store</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="checkout-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content container">
+            <div class="logo">
+                <h1>Dawood Khan<br><span>Ladies Clothing Store</span></h1>
+            </div>
+            <div class="checkout-steps">
+                <span class="step active">Cart</span>
+                <i class="fas fa-chevron-right"></i>
+                <span class="step active">Information</span>
+                <i class="fas fa-chevron-right"></i>
+                <span class="step">Payment</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-grid">
+                <!-- Checkout Form -->
+                <div class="checkout-form">
+                    <div class="form-section" id="contact-info">
+                        <h2>Contact Information</h2>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" required placeholder="Phone">
+                        </div>
+                    </div>
+
+                    <div class="form-section" id="shipping-address">
+                        <h2>Shipping Address</h2>
+                        <div class="form-group name-group">
+                            <input type="text" id="firstName" required placeholder="First Name">
+                            <input type="text" id="lastName" required placeholder="Last Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="address" required placeholder="Address">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="apartment" placeholder="Apartment, suite, etc. (optional)">
+                        </div>
+                        <div class="form-group location-group">
+                            <input type="text" id="city" required placeholder="City">
+                            <select id="country" required>
+                                <option value="">Country</option>
+                                <option value="US">United States</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="CA">Canada</option>
+                            </select>
+                            <input type="text" id="zipCode" required placeholder="ZIP Code">
+                        </div>
+                    </div>
+
+                    <div class="form-section" id="shipping-method">
+                        <h2>Shipping Method</h2>
+                        <div class="shipping-options">
+                            <label class="shipping-option">
+                                <input type="radio" name="shipping" value="standard" checked>
+                                <span class="option-info">
+                                    <span class="option-name">Standard Shipping</span>
+                                    <span class="option-price">Free</span>
+                                </span>
+                                <span class="delivery-time">5-7 business days</span>
+                            </label>
+                            <label class="shipping-option">
+                                <input type="radio" name="shipping" value="express">
+                                <span class="option-info">
+                                    <span class="option-name">Express Shipping</span>
+                                    <span class="option-price">$15.00</span>
+                                </span>
+                                <span class="delivery-time">2-3 business days</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <a href="index.html" class="back-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Return to cart
+                        </a>
+                        <button class="cta-button" onclick="proceedToPayment()">
+                            Continue to Payment
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-items">
+                        <!-- Items will be dynamically added here -->
+                    </div>
+                    <div class="summary-subtotal">
+                        <span>Subtotal</span>
+                        <span class="subtotal-amount">$0.00</span>
+                    </div>
+                    <div class="summary-shipping">
+                        <span>Shipping</span>
+                        <span class="shipping-amount">Free</span>
+                    </div>
+                    <div class="promo-code">
+                        <input type="text" placeholder="Promo code">
+                        <button class="apply-btn">Apply</button>
+                    </div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span class="total-amount">$0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notification -->
+    <div class="notification"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>
